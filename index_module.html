@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>vue tutorial</title>
+    <!-- ▼▼▼ Bootstrap setting ▼▼▼ -->
+    <!-- Bootstrap download from https://getbootstrap.com/docs/4.4/getting-started/download/ -->
+    <!-- jQuery download from https://jquery.com/download/ -->
+    <link href="tutorial/bootstrap-4.4.1-dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="tutorial/js/lib/jquery-3.4.1.min.js"></script>
+    <script src="tutorial/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+    <!-- ▲▲▲ Bootstrap setting ▲▲▲ -->
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- Vue download from https://cdn.jsdelivr.net/npm/vue -->
+    <!-- RequireJS download from https://requirejs.org/docs/download.html#requirejs -->
+    <script>
+      var require = {
+        baseUrl: "tutorial/js",
+        paths: {
+          "vue": "lib/vue_2.6.11.js",
+        },
+        deps: ["index"],
+        callback: function(index) {}
+      };
+    </script>
+    <script src="tutorial/js/lib/require_2.3.6.js"></script>
+  </body>
+</html>
