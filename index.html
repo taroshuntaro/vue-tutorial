@@ -5,13 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>vue tutorial</title>
-    <!-- Vue download from https://cdn.jsdelivr.net/npm/vue -->
-    <script src="tutorial/js/lib/vue_2.6.11.js"></script>
   </head>
   <body>
-    <div id="app">
-      {{ message }}
+    <!-- 宣言的レンダリング -->
+    <div id="app">{{ message }}</div>
+    <hr>
+    <div  id="app-2">
+      <span v-bind:title="message">
+        Hover  your mouse over me for a few seconds to see my dynamically bound title!
+      </span>
     </div>
+    <hr>
+    <!-- 条件分岐とループ -->
+    <div  id="app-3">
+      <p><span v-if="seenTrue">{{ message }}</span></p>
+      <p><span v-if="seenFalse">{{ message }}</span></p>
+    </div>
+    <div  id="app-4">
+      <ol>
+        <li v-for="todo in todos">{{ todo.text }}</li>
+      </ol>
+    </div>
+    <hr>
+    <!-- ユーザー入力の制御 -->
+    <div  id="app-5">
+      <p>{{ message }}</p>
+      <button v-on:click="reverseMessage">Reverse message</button>
+    </div>
+    <div  id="app-6">
+      <p>{{ message }}</p>
+      <input type="text" v-model="message">
+    </div>
+    <hr>
+    <!-- Vue download from https://cdn.jsdelivr.net/npm/vue -->
+    <script src="tutorial/js/lib/vue_2.6.11.js"></script>
     <script src="tutorial/js/index.js"></script>
   </body>
 </html>
