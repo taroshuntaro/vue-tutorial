@@ -52,3 +52,8 @@ var app6 = new Vue({
     message: 'Hello Vue!'
   }
 });
+
+// todo-item component
+Vue.component('todo-item', {
+  template: '<li>This is a todo<li>'
+});
