@@ -1,4 +1,5 @@
 // index.js
+// 20200110 test comment
 
 var app = new Vue({
   el: '#app',
