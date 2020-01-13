@@ -41,9 +41,14 @@
     <div  id="app-7">
       <ol>
         <!-- todo-item component -->
-        <todo-item></todo-item>
+        <todo-item
+          v-for="item in groceryList"
+          v-bind:todo="item"
+          v-bind:key="item.id"
+        ></todo-item>
       </ol>
     </div>
+    <hr>
     <!-- Vue download from https://cdn.jsdelivr.net/npm/vue -->
     <script src="tutorial/js/lib/vue_2.6.11.js"></script>
     <script src="tutorial/js/index.js"></script>
